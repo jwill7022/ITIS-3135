@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+        <br>
+        
+        <div>
+            <label for="bday">Birthday</label>
+            <input type="date" id="bday">
+        </div>
+        <br>
+        <fieldset>
+            <label for="interests">Choose your interests</label>
+            <div>
+                <input type="checkbox" id="art" value="Art">
+                <label for="art">Art</label>
+            </div>
+            <div>
+                <input type="checkbox" id="coding" value="Coding">
+                <label for="coding">Coding</label>
+            </div>
+            <div>
+                <input type="checkbox" id="music" value="Music">
+                <label for="music">Music</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sports" value="Sports">
+                <label for="sports">Sports</label>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="browser">Choose your favorite browser:</label>
+            <div>
+                <input type="radio" id="chrome" value="chrome" name="browser">
+                <label for="chrome">Chrome</label>
+            </div>
+            <div>
+                <input type="radio" id="firefox" value="firefox" name="browser">
+                <label for="firefox">Firefox</label>
+            </div>
+            <div>
+                <input type="radio" id="edge" value="edge" name="browser">
+                <label for="edge">Edge</label>
+            </div>
+            <div>
+                <input type="radio" id="safari" value="safari" name="browser">
+                <label for="safari">Safari</label>
+            </div>
+        </fieldset>
+        <br>
+        <label for="language">Choose your favorite programming language</label>
+        <br>
+        <select id="language">
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java" selected>Java</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+        </select>
+        <br>
+        <br>
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" cols="30" rows="3"></textarea>
+        </div>
+        
+        <input type="submit" value="Create an Account">
+    </form>
+</body>
+</html>
