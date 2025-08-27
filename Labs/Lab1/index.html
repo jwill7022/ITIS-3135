@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niner Coffee House</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Niner Coffee House</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+            </ul>
+        </nav>
+        <img src="images/hero.jpg" alt="A cup of Coffee" width="1600" height="727">
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Niner Cafe House</h2>
+            <p>Welcome to Niner Coffee House. We are a gourmet coffee shop that serves cold and hot coffee and desserts. Visit us to check out our:</p>
+            <ul>
+                <li>Specialty Coffee</li>
+                <li>Gourmet Desserts</li>
+                <li>Music and Poetry Readings</li>
+                <li>Open Mice Night</li>
+            </ul>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <table>
+                <caption>Coffee and Desserts Selections</caption>
+                <tr>
+                    <th rowspan="5">Cold Beverages</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Cold Brew</td>
+                    <td>$3.75</td>
+                </tr>
+                <tr>
+                    <td>Iced Latte</td>
+                    <td>$4.25</td>
+                </tr>
+                <tr>
+                    <td>Frappuccino</td>
+                    <td>$4.50</td>
+                </tr>
+                <tr>
+                    <td>Iced Coffee</td>
+                    <td>$3.00</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Hot Beverages</th>
+                    <td>Cafe Latte</td>
+                    <td>$3.75</td>
+                </tr>
+                <tr>
+                    <td>Caramel Macchiato</td>
+                    <td>$4.25</td>
+                </tr>
+                <tr>
+                    <td>Skinny Mocha</td>
+                    <td>$4.00</td>
+                </tr>
+                <tr>
+                    <td>Hot Coffee</td>
+                    <td>$3.25</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Desserts</th>
+                    <td>Croissant</td>
+                    <td>$1.75</td>
+                </tr>
+                <tr>
+                    <td>Muffin</td>
+                    <td>$2.25</td>
+                </tr>
+                <tr>
+                    <td>Cupcake</td>
+                    <td>$3.50</td>
+                </tr>
+                <tr>
+                    <td>Cheesecake</td>
+                    <td>$5.00</td>
+                </tr>
+            </table>
+            <p><small>* Almond, Coconut, and Soy milk are available</small></p>
+        </section>
+        
+        <section id="reservation">
+            <h2>Make a Reservation</h2>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="tel">Phone:</label>
+                    <input type="tel" id="tel" required>
+                </div>
+                <br>
+                <div>
+                    <label for="date">Date/Time:</label>
+                    <input type="datetime-local" id="date" required>
+                </div>
+                <br>
+                <div>
+                    <label for="amount">Tabel size:</label>
+                    <select name="amount" id="amount">
+                        <option value="2">2-person table</option>
+                        <option value="4">4-person table</option>
+                        <option value="6">6-person table</option>
+                        <option value="8">8-person table</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <fieldset id="location">
+                        <legend>Location</legend>
+                        <input type="radio" id="outdoors" value="Outdoors" name="location">
+                        <label for="outdoors">Outdoors</label>
+                        <input type="radio" id="indoors" value="Indoors" name="location">
+                        <label for="indoors">Indoors</label>
+                    </fieldset>
+                </div>
+                <br>
+                <div>
+                    <label for="request">Special Requests</label>
+                    <br>
+                    <textarea id="request" cols="30" rows="3"></textarea>
+                </div>
+
+                <input type="submit" value="Reserve">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2022 Niner Coffee House. All rights reserved.</p>
+        <p>Location: 9201 University City Blvd, Charlotte, NC 28223</p>
+        <p><a href="mailto:ninercoffee@gmail.com">Email: ninercoffee@gmail.com</a></p>
+        <p><a href="tel:+17041235689">Phone: (704)123-5689</a></p>
+    </footer>
+</body>
+</html>
