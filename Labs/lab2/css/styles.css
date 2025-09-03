@@ -150,3 +150,11 @@ iframe {
 }
 
 /* Footer Section */
+footer {
+    background-color: var(--clr-bg);
+    color: var(--clr-neutral);
+    font-size: .833rem;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
