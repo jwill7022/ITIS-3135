@@ -1,13 +1,44 @@
 /* CSS Variables */
-
+:root {
+    --clr-primary:#9c5526;
+    --clr-bg:#54331d;
+    --clr-neutral:#ede7e3;
+    --clr-black:hsla(30, 4%, 20%, 0.8);
+    --clr-neutral75:hsl(24, 22%, 91%, 0.75);
+}
 
 /* Global Styles */
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 /* Header Styles */
+h1, h3, h4 {
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 2.466rem;
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
 
 
 /* Main Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color:var(--clr-black);
+    line-height: 1.5;
+}
 
 
 /* About Section */
