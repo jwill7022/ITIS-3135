@@ -14,7 +14,6 @@
     box-sizing: border-box;
 }
 
-/* Header Styles */
 h1, h3, h4 {
     font-family: Oswald, sans-serif;
     font-weight: 500;
@@ -32,13 +31,21 @@ h4 {
     font-size: 1.44rem;
 }
 
-
-/* Main Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     color:var(--clr-black);
     line-height: 1.5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coffee.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+/* Header Styles */
+
+
+/* Main Styles */
+
 
 
 /* About Section */
