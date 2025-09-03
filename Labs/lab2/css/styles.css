@@ -140,6 +140,13 @@ iframe {
 #location p a {
     color: var(--clr-primary);
     text-decoration-line: none;
+    border-bottom: 2px solid transparent;
+
+}
+
+#location a:hover,
+#location a:active {
+    border-color: var(--clr-primary);
 }
 
 /* Footer Section */
