@@ -126,6 +126,20 @@ hr {
 }
 
 /* Location and Hours Section */
+#location > div {
+    text-align: center;
+}
 
+iframe {
+    width:360px;
+    height: 270px;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+#location p a {
+    color: var(--clr-primary);
+    text-decoration-line: none;
+}
 
 /* Footer Section */
