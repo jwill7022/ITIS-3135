@@ -42,7 +42,16 @@ body {
 }
 
 /* Header Styles */
+header {
+    color: var(--clr-neutral);
+    text-align: center;
+    padding: 1rem;
+}
 
+#established {
+    color: var(--clr-neutral75);
+    opacity: 0.75;
+}
 
 /* Main Styles */
 
