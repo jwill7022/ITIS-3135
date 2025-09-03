@@ -54,6 +54,28 @@ header {
 }
 
 /* Main Styles */
+main {
+    background-color: var(--clr-neutral);
+    width: 80%;
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+}
+
+main h3, 
+main h4 {
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+}
+
+main h4 {
+    text-align: center;
+}
+
+main > section:nth-of-type(1), 
+main>section:nth-of-type(2) {
+    margin-bottom: 1rem;
+}
 
 
 
@@ -61,6 +83,12 @@ header {
 
 
 /* Menu Section */
+#menu p.title {
+    text-align: left
+}
+#menu p.price {
+    text-align: right
+}
 
 
 hr {
