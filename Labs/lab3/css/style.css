@@ -35,7 +35,6 @@ main {
 }
 
 .card {
-    border: 1px solid black;
     padding: 1rem 2rem;
     border-radius: 8px;
     display: flex;
@@ -68,4 +67,26 @@ p:last-of-type {
 
 p:nth-of-type(2n) {
     opacity: 50%;
+}
+
+.card:nth-of-type(1) {
+    background-color: var(--clr-violet);
+    color: var(--clr-white);
+    background-image:url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 right 30px;
+}
+
+.card:nth-of-type(2) {
+    background-color: var(--clr-gray-blue);
+    color: var(--clr-white);
+}
+
+.card:nth-of-type(3), .card:nth-of-type(5) {
+    background-color: var(--clr-white);
+}
+
+.card:nth-of-type(4) {
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-white);
 }
