@@ -43,3 +43,9 @@ main {
     gap: 0.8rem 0;
 }
 
+.card img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--clr-light-violet);
+    border-radius: 50%;
+}
