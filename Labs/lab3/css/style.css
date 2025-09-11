@@ -49,3 +49,23 @@ main {
     border: 2px solid var(--clr-light-violet);
     border-radius: 50%;
 }
+
+.card header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+h3 {
+    font-size: 18.72px;
+}
+
+
+p:last-of-type {
+    opacity: 70%;
+}
+
+p:nth-of-type(2n) {
+    opacity: 50%;
+}
