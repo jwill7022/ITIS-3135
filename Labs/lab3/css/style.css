@@ -107,3 +107,17 @@ p:nth-of-type(2n) {
     }
     
 }
+
+@media (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        max-width: 1050px;
+    }
+    
+    .card:nth-of-type(5) {
+        grid-column-start: 4;
+        grid-row: 1/3;
+    }
+}
