@@ -21,9 +21,25 @@ body {
     font-weight: 500;
     color: var(--clr-gray-blue);
     line-height: 1.3;
+    
+}
+
+main {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+    
+
 }
 
 .card {
     border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem 0;
 }
 
