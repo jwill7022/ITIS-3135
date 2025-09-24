@@ -125,12 +125,30 @@ img.hero-img {
 div.cover-letter {
     padding: 50px;
     text-align: justify;
+    
 
 }
 
 /* Skills List */
-div.skills-container {
+#skills-container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+}
 
+#skills-container p {
+    background-color: var(--clr-wheel-two);
+    border-radius: 10px;
+    align-content: center;
+    width: auto;
+    height: 4rem;
+    padding: 10px;
+}
+
+#skills-container p:nth-child(even){
+    text-align: right;
 }
 
 @media(min-width:600px) {
