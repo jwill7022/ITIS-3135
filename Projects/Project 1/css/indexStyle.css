@@ -21,7 +21,8 @@
 }
 
 body {
-    padding-top: 60px;
+    /* padding-top: 60px; */
+    padding-top: 100px;
     font-family: calling-code, sans-serif;
     background-color: var(--clr-wheel-one);
 }
@@ -38,6 +39,7 @@ header {
     display: flex;
     padding: 1rem 0;
     justify-content: center;
+    max-height: 80px;
     z-index: 10;
 }
 
@@ -63,7 +65,7 @@ ul.nav-links{
 ul.nav-links a{
     color:black;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem .3rem;
     border-radius: 10%;
     align-items: right;
 }
@@ -82,10 +84,10 @@ ul.nav-links a{
     font-weight: 400;
     font-style: normal;
     background-image: url("../images/hero_superhero_dark.jpg");
-    background-size: cover;
-    background-position: left;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    background-size: auto;
+    background-position: right;
+    display: flex;
+    flex-direction:column;
     align-items: center;
     gap:10px;
 }
@@ -93,26 +95,20 @@ ul.nav-links a{
 .hero h1 {
     color: var(--clr-name-plate);
     font-family: calling-code, sans-serif;
-    justify-items: left;
-    align-self: last baseline;
-    grid-column: 3;
-    
+    justify-items: center;
+    align-self: center;
 }
 .hero p {
     color: var(--clr-textcolor);
-    justify-self: left;
-    align-self: first baseline;
-    grid-column: 3;
-    
+    justify-self: center;
+    align-self: center;
+    text-align: center;
 }
 
 img {
-    height: 100px;
+    height: 190px;
     width: auto;
     justify-self: right;
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
 /* Cover Letter Section */
@@ -126,4 +122,40 @@ div.cover-letter {
 /* Skills List */
 div.skills-container {
 
+}
+
+@media(min-width:600px) {
+    .hero {
+        background-size: cover;
+        background-position: left;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap:10px;
+    }
+
+    .hero h1 {
+    color: var(--clr-name-plate);
+    font-family: calling-code, sans-serif;
+    justify-items: left;
+    align-self: last baseline;
+    grid-column: 3;
+    
+    }
+    .hero p {
+        color: var(--clr-textcolor);
+        justify-self: left;
+        align-self: first baseline;
+        grid-column: 3;
+        
+    }
+
+    img {
+        height: 190px;
+        width: auto;
+        justify-self: right;
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
