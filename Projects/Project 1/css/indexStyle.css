@@ -1,0 +1,47 @@
+
+/* Quick Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+:root {
+    --clr-primary: #A5FF82;
+    --clr-secondary: #66FFD2;
+
+}
+
+
+
+/* Body */
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero {
+    padding: 3%;
+    font-family: calling-code, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.hero h1 {
+    color: #64FF4D;
+}
+.hero p {
+    color: var(--clr-secondary);
+}
+
+img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
