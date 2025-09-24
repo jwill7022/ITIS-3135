@@ -130,7 +130,7 @@ div.cover-letter {
 }
 
 /* Skills List */
-#skills-container {
+#languages {
     padding: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -138,17 +138,18 @@ div.cover-letter {
     
 }
 
-#skills-container p {
+#languages p {
     background-color: var(--clr-wheel-two);
     border-radius: 10px;
     align-content: center;
     width: auto;
     height: 4rem;
-    padding: 10px;
+    text-align: center;
+    vertical-align: center;
 }
 
-#skills-container p:nth-child(even){
-    text-align: right;
+#languages p:last-of-type{
+    grid-column: 1 / -1;
 }
 
 @media(min-width:600px) {
