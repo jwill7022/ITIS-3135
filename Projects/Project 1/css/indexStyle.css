@@ -8,24 +8,33 @@
 
 /*Variables*/
 :root {
-    --clr-header: #1c3610;
-    --clr-secondary: #233a32;
+    --clr-name-plate: #1c3610;
+    --clr-textcolor: #233a32;
+
+    --clr-wheel-one:#E0C3AB;
+    --clr-wheel-two:#999FA0;
+    --clr-wheel-three:#A2D3DB;
+    --clr-wheel-four:#867262;
+    --clr-wheel-five:#33565C;
+    --clr-wheel-six: #332214;
 
 }
 
 body {
     padding-top: 60px;
     font-family: calling-code, sans-serif;
+    background-color: var(--clr-wheel-one);
 }
 
 
 /* Header */
 header {
     position: fixed;
+    color: var(--clr-wheel-six);
     top: 0;
     left: 0;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: var(--clr-wheel-two);
     display: flex;
     padding: 1rem 0;
     justify-content: center;
@@ -60,7 +69,7 @@ ul.nav-links a{
 }
 
 .nav-links a:hover{
-    background-color: rgb(253, 218, 173);
+    background-color: var(--clr-wheel-four);
 }
 
 
@@ -82,7 +91,7 @@ ul.nav-links a{
 }
 
 .hero h1 {
-    color: var(--clr-header);
+    color: var(--clr-name-plate);
     font-family: calling-code, sans-serif;
     justify-items: left;
     align-self: last baseline;
@@ -90,7 +99,7 @@ ul.nav-links a{
     
 }
 .hero p {
-    color: var(--clr-secondary);
+    color: var(--clr-textcolor);
     justify-self: left;
     align-self: first baseline;
     grid-column: 3;
@@ -104,4 +113,17 @@ img {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+/* Cover Letter Section */
+
+div.cover-letter {
+    padding: 50px;
+    text-align: justify;
+
+}
+
+/* Skills List */
+div.skills-container {
+
 }
