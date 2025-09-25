@@ -1,4 +1,3 @@
-/* Quick Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,5 +6,66 @@
 
 /*Variables*/
 :root {
+    --clr-primary: #009DF0;
+    --clr-accent-light: #F09B00;
+    --clr-accent-dark: #F04E00;
+    --clr-card-background: #E3F0FB;
+    --clr-page-background: #fffcf6;
+    --clr-text-light: #263f4a;
+    --clr-text-main: #1B0A14;
+    /* Black for text-dark */
+}
 
+main {
+    padding: 2rem;
+    text-align: center; /* aligns everything to the center*/
+}
+
+body {
+    font-family: 'Crossorigin', sans-serif;
+    line-height: 1.5;
+    background-color: var(--clr-page-background);
+    color: var(--clr-text-main);
+}
+
+header {
+    /* Font */
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--clr-text-main);
+    padding: 2rem;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2rem; /* space between cards */
+}
+
+#projects h2 {
+    /* Font here */
+}
+
+#projects p {
+    color: var(--clr-text-light);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--clr-card-background);
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgb(91, 127, 161);
+    overflow: hidden;
+}
+
+.project-image {
+    height: 300px; /* placeholder */
+
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
 }
