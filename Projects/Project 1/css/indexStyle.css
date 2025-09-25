@@ -9,14 +9,13 @@
 /*Variables*/
 :root {
     --clr-name-plate: #1c3610;
-    --clr-textcolor: #233a32;
-
-    --clr-wheel-one:#E0C3AB;
-    --clr-wheel-two:#999FA0;
-    --clr-wheel-three:#A2D3DB;
-    --clr-wheel-four:#867262;
-    --clr-wheel-five:#33565C;
-    --clr-wheel-six: #332214;
+    --clr-text-color: rgb(41, 39, 39);
+    --clr-One:#F2D7C0;
+    --clr-Two:#B8C2C5;
+    --clr-Three:#43665f;
+    --clr-Four:#A68B78 ;
+    --clr-Five:#4A5052;
+    --clr-Six: #5D3A28;
 
     --fs-h1: 1.7rem;
     --fs-text: .9rem;
@@ -27,18 +26,18 @@ body {
     /* padding-top: 60px; */
     padding-top: 80px;
     font-family: calling-code, sans-serif;
-    background-color: var(--clr-wheel-one);
+    background-color: var(--clr-One);
 }
 
 
 /* Header */
 header {
     position: fixed;
-    color: var(--clr-wheel-six);
+    color: var(--clr-Six);
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--clr-wheel-two);
+    background-color: var(--clr-Three);
     display: flex;
     padding: 1rem 0;
     justify-content: center;
@@ -55,7 +54,7 @@ div.nav-bar {
     padding: 0 2rem;
 }
 
-div.nav-logo {
+.nav-logo {
     align-items: left;
 }
 
@@ -74,7 +73,7 @@ ul.nav-links a{
 }
 
 .nav-links a:hover{
-    background-color: var(--clr-wheel-four);
+    background-color: var(--clr-Four);
 }
 
 
@@ -129,14 +128,15 @@ div.cover-letter {
 
 /* Projects Containers */
 .list-all-projects {
-    background-color: var(--clr-wheel-four);
+    background-color: var(--clr-Four);
     text-align: center;
     min-height: 300px;
 }
 
 .list-all-projects h2{
     padding-top: 20px;
-    color: var(--clr-wheel-six)
+    color: var(--clr-text-color);
+    opacity: 100%;
 }
 
 #projects {
@@ -147,7 +147,7 @@ div.cover-letter {
 }
 
 .project-box{
-    background-color: var(--clr-wheel-two);
+    background-color: var(--clr-Two);
     border-radius: 10px;
     width: auto;
     height: 8rem;
@@ -157,8 +157,7 @@ div.cover-letter {
     align-content: center;
     align-items: top;
     justify-items: left; 
-    color: var(--clr-wheel-six);
-    color-scheme: ;
+    color: var(--clr-text-color);
 }
 
 .project-box img {
@@ -211,8 +210,6 @@ div.cover-letter {
         grid-column-start: 2;
         height: 10rem;
         width: auto;
-
-        
     }
 
     #projects {
