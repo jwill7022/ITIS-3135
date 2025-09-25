@@ -175,8 +175,50 @@ div.cover-letter {
    opacity: 0.8;
 }
 
+#contact {
+    width: auto;
+    height: auto;
+}
 
+#contact h2 {
+    text-align: center;
+}
+#socials{
+    display: flex;
+    justify-content: center;
+}
 
+#socials a img {
+    width: 4rem;
+    height: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+form input,
+form textarea {
+    width: 20rem;
+    height: 2rem;
+    font-size: larger;
+    border-top-color: var(--clr-Five);
+    text-align: center;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+form textarea {
+    width: 24rem;
+    height: auto;
+    text-align: left;
+    padding: 1rem;
+    margin-left: 7rem;
+}
 
 @media(min-width:600px) {
     ul.nav-links{
