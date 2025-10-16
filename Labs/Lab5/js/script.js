@@ -130,4 +130,32 @@ form.addEventListener('submit', e => {
   }
 });
 
+const wrapper = document.querySelector('.articles-wrapper');
+wrapper.addEventListener('click', e => {
+  const deleteBtn = e.target.closest('.delete-btn');
+  if (deleteBtn){
+    const parent = deleteBtn.closest('.article-container');
+    if(parent){
+      const body = deleteBtn.nextElementSibling.nextElementSibling;
+      const title = body.firstElementChild.innerText;
+      const articleIndex = articles.findIndex(articles => articles.title === title); 
+      articles.splice(articleIndex, 1);
+      parent.remove();
+    }
+  }
+});
 
+const readMore = document.querySelector('.articles-wrapper');
+readMore.addEventListener('click', e => {
+  console.log(e);
+  const paragraph = e.target.previousElementSibling;
+    if(paragraph){
+      const spans = paragraph.querySelectorAll('span');
+      spans.forEach(span => span.classList.toggle('hidden'));
+    }
+    if(e.target.innerText === 'Read More'){
+      e.target.innerText = 'Read Less';
+    } else {
+      e.target.innerText = 'Read More';
+    }
+});
