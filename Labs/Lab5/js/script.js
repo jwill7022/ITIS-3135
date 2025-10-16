@@ -147,8 +147,10 @@ wrapper.addEventListener('click', e => {
 
 const readMore = document.querySelector('.articles-wrapper');
 readMore.addEventListener('click', e => {
-  console.log(e);
   const paragraph = e.target.previousElementSibling;
+  const readMoreBtn = paragraph.closest('.btn');
+  console.log(readMoreBtn);
+  if(e.target.innerText === 'Read More' || e.target.innerText === 'Read Less'){
     if(paragraph){
       const spans = paragraph.querySelectorAll('span');
       spans.forEach(span => span.classList.toggle('hidden'));
@@ -158,4 +160,5 @@ readMore.addEventListener('click', e => {
     } else {
       e.target.innerText = 'Read More';
     }
+  }
 });
