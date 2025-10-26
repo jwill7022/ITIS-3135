@@ -1,15 +1,17 @@
 function Header() {
     return (
         <header>
-            <h1>My Blog</h1>
+        <div>
+            <h1 className="text-2xl">Group 18 Blog</h1>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="./index.html#posts">Posts</a></li>
+                    <li><a href="#comments">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
     );
 }
 
