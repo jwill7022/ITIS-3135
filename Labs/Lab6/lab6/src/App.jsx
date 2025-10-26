@@ -8,14 +8,12 @@ import Footer from './components/common/Footer.jsx'
 import Comments from './components/blog/Comments.jsx'
 
 function App() {
-
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
       <Header />
       <BlogPost />
       <Comments />
       <Footer />
-
     </div>
   )
 }
