@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { InfinitySpin } from 'react-loader-spinner';
 
 // Static data for demonstration
 const posts = [
@@ -48,7 +49,10 @@ function BlogPostsPage() {
             {loading ? (
                 <main className="container mx-auto px-4 py-8 max-w-4xl">
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors duration-500">
-                        <p className="text-3xl font-bold text-gray-800 dark:text-white mb-6 transition-colors duration-500">Loading...</p>
+                        <div className="flex justify-center items-center">
+                            <InfinitySpin width='200' color="#2563EB" />
+                        </div>
+                        <p className="text-center text-3xl font-bold text-gray-800 dark:text-white mb-6 transition-colors duration-500">Loading...</p>
                     </div>
                 </main>
                 

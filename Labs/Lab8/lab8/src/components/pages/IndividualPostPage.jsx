@@ -4,6 +4,7 @@ import CommentForm from '../blog/CommentForm';
 import Comments from '../blog/Comments';
 import BlogPost from '../blog/BlogPost';
 import axios from 'axios';
+import { InfinitySpin } from 'react-loader-spinner';
 
 // Sample static post content
 const staticPostContent = {
@@ -21,12 +22,10 @@ function IndividualPostPage() {
     const [loading, setLoading] = useState(true);
     
 
-    console.log(postAPIData, authorData);
+    // console.log(postAPIData, authorData);
 
     // State for managing comments for this post
-    const [comments, setComments] = useState([
-        { id: 1, name: "Initial User", text: "Great post! Very informative." }
-    ]);
+    const [comments, setComments] = useState([]);
 
     const postComment = (newComment) => {
         axios.post(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`, {
@@ -53,6 +52,9 @@ function IndividualPostPage() {
             const authorRes = await axios.get(`https://jsonplaceholder.typicode.com/users/${postRes.data.userId}`);
             setAuthorData(authorRes.data);
 
+            const commentsRes = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
+            setComments(commentsRes.data);
+
             const completedPostData = {
                 title: postRes.data.title,
                 body: postRes.data.body,
@@ -61,7 +63,7 @@ function IndividualPostPage() {
 
             setPostAPIData(completedPostData);
         } catch (e) {
-            console.log(e);
+            console.log("Error fetching post data:", e);
         } finally {
             setLoading(false);
         }
@@ -75,7 +77,10 @@ function IndividualPostPage() {
             {loading ? (
                 <main className="container mx-auto px-4 py-8 max-w-4xl">
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors duration-500">
-                        <p className="text-3xl font-bold text-gray-800 dark:text-white mb-6 transition-colors duration-500">Loading...</p>
+                        <p className="text-center text-3xl font-bold text-gray-800 dark:text-white mb-6 transition-colors duration-500">Loading...</p>
+                        <div className="flex justify-center items-center">
+                            <InfinitySpin width='200' color="#2563EB" />
+                        </div>
                     </div>
                 </main>
                 

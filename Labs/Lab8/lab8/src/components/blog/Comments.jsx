@@ -20,7 +20,7 @@ function Comments({ comments }) {
                     {comments.map((comment, index) => (
                         <li key={index} className="border-b border-gray-200 dark:border-gray-700 pb-4 last:border-b-0">
                             <p className="font-semibold text-gray-800 dark:text-white">{comment.name}</p>
-                            <p className="text-gray-600 dark:text-gray-400">{comment.text}</p>
+                            <p className="text-gray-600 dark:text-gray-400">{comment.body}</p>
                         </li>
                     ))}
                 </ul>

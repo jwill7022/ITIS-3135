@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Content from "./Content";
 import { useTheme } from "../ThemeContext";
 import axios from 'axios';
-import Comments from '../../../../../Lab7/lab7/src/components/blog/Comments';
 
 // Receive postContent as a prop instead of defining it internally
 function BlogPost({ postContent }) {
