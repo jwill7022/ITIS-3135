@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '../AuthContext';
 
 function CommentForm({ onAddComment }) {
+    const { user } = useAuth();
     const [name, setName] = useState('');
     const [commentText, setCommentText] = useState('');
+
+    // Set the name to the logged-in user's username on component mount
+    useEffect(() => {
+        if (user && user.username) {
+            setName(user.username);
+        }
+    }, [user]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -33,6 +42,8 @@ function CommentForm({ onAddComment }) {
                     onChange={(e) => setName(e.target.value)}
                     className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-500"
                     required
+                    disabled={user && user.username ? true : false}
+                    title={user && user.username ? "Your username is automatically filled in" : ""}
                 />
                 <textarea
                     placeholder="Add your comment"
