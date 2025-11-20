@@ -3,10 +3,10 @@ import React, { createContext, useContext, useState, useEffect} from 'react';
 // Create context for authentication state management
 const AuthContext = createContext();
 
-// Custom hook to access authentication context
+// hook to access authentication context
 export const useAuth = () => useContext(AuthContext);
 
-// AuthProvider component to manage user authentication state
+// manage user authentication state
 function AuthProvider({ children }) {
     // Initialize user from localStorage or null
     const [user, setUser] = useState(() => {
@@ -33,7 +33,7 @@ function AuthProvider({ children }) {
     const login = (username, password) => {
         // Accept any username with password >= 6 characters for demo
         if (username && password.length >= 6) {
-            const userData = { username, loggedInAt: new Date().toISOString() };
+            const userData = { username, loggedInAt: new Date().toISOString() }; // "loggedInAt" is a timestamp for potential future functionality
             setUser(userData);
             setIsAuthenticated(true);
             return true;

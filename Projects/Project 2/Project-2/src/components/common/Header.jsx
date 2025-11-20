@@ -16,7 +16,7 @@ function Header() {
                 <h1 className="text-4xl font-bold mb-4">
                     {/* Link to Home Page */}
                     <Link to="/" className="hover:text-blue-200 transition-colors">
-                        My Blog
+                        THE Blog
                     </Link>
                 </h1>
                 <nav>
