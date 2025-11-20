@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import CommentForm from '../blog/CommentForm';
 import Comments from '../blog/Comments';
 import BlogPost from '../blog/BlogPost';
+import { useAuth } from '../AuthContext';
 import axios from 'axios';
 import { InfinitySpin } from 'react-loader-spinner';
 
@@ -18,6 +19,7 @@ function IndividualPostPage() {
     const postData = staticPostContent[postId] || staticPostContent[1]; // Fallback to post 1 if ID not found
     const [postAPIData, setPostAPIData] = useState();
     const [authorData, setAuthorData] = useState();
+    const { isAuthenticated } = useAuth();
 
     const [loading, setLoading] = useState(true);
     
@@ -100,11 +102,24 @@ function IndividualPostPage() {
                     Comments ({comments.length})
                 </h2>
                 
-                {/* Form to add a new comment */}
-                <CommentForm onAddComment={postComment} />
-                
-                {/* Display existing comments */}
-                <Comments comments={comments} />
+                {isAuthenticated ? (
+                    <>
+                        {/* Form to add a new comment - only visible to authenticated users */}
+                        <CommentForm onAddComment={postComment} />
+                        
+                        {/* Display existing comments */}
+                        <Comments comments={comments} />
+                    </>
+                ) : (
+                    <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-300 dark:border-blue-700 rounded-lg p-6 text-center">
+                        <p className="text-blue-900 dark:text-blue-200 text-lg font-semibold mb-3">
+                            Please log in to comment on this post
+                        </p>
+                        <p className="text-blue-800 dark:text-blue-300 mb-4">
+                            Sign in to share your thoughts and engage with the community.
+                        </p>
+                    </div>
+                )}
             </div>
         </div>
     );

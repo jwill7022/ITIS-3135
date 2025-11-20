@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // for routing
 import { useTheme } from '../ThemeContext.jsx';
+import { useAuth } from '../AuthContext.jsx';
 
 function Header() {
     // Get theme state and toggler from context
     const { toggleTheme, theme } = useTheme();
+    const { isAuthenticated, user, logout } = useAuth();
 
     return (
         <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 shadow-lg">
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold mb-4">
+                    {/* Link to Home Page */}
                     <Link to="/" className="hover:text-blue-200 transition-colors">
                         My Blog
                     </Link>
@@ -17,15 +20,9 @@ function Header() {
                 <nav>
                     <ul className="flex space-x-6 text-lg items-center">
                         <li>
-                            {/* Link to the Home/Blog Posts Page */}
-                            <Link to="/" className="hover:text-blue-200 transition-colors">
+                            {/* Link to the Blog Posts Page */}
+                            <Link to="/all" className="hover:text-blue-200 transition-colors">
                                 Blog Posts
-                            </Link>
-                        </li>
-                        <li>
-                            {/* Link to a placeholder Individual Post Page */}
-                            <Link to="/post/1" className="hover:text-blue-200 transition-colors">
-                                Post Detail (Demo)
                             </Link>
                         </li>
                         <li>
@@ -33,6 +30,17 @@ function Header() {
                             <Link to="/contact" className="hover:text-blue-200 transition-colors">
                                 Contact
                             </Link>
+                        </li>
+                        <li>
+                            {isAuthenticated ? (
+                                <Link to="/" onClick={logout} className="hover:text-blue-200 transition-colors">
+                                    Logout
+                                </Link>
+                            ) : (
+                                <Link to="/login" className="hover:text-blue-200 transition-colors">
+                                    Login
+                                </Link>
+                            )}
                         </li>
                         {/* Theme Toggle Button */}
                         <button 

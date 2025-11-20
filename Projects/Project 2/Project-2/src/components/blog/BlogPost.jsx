@@ -18,7 +18,7 @@ function BlogPost({ postContent }) {
     };
     
     return (
-        <div className={`bg-gray-100 dark:bg-gray-900 transition-colors duration-500 ${theme === 'dark' ? 'dark-mode-styles' : 'light-mode-styles'}`}>
+        <div>
             <Content 
                 title={title}
                 body={body}

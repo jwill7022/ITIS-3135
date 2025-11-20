@@ -5,9 +5,8 @@ function Content({title, body, author}) {
     const { theme } = useTheme(); // Get the current theme
 
     return (
-        <main className="container mx-auto px-4 py-8">
-            <div className={`bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto transition-colors duration-500 
-                          ${theme === 'dark' ? 'dark:bg-gray-800' : 'bg-white'}`}>
+        <main className="container mx-auto px-4 py-8 min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 max-w-4xl mx-auto transition-colors duration-500">
                 <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-500">
                     {title}
                 </h1>

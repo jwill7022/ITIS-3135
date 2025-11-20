@@ -42,7 +42,7 @@ function BlogPostsPage() {
     }, []);
     
     return (
-        <main className="container mx-auto px-4 py-12">
+        <main className="container mx-auto px-4 py-12 min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
             <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-8 transition-colors duration-500">
                 All Blog Posts
             </h2>
