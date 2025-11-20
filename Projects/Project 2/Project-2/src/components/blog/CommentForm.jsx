@@ -22,8 +22,7 @@ function CommentForm({ onAddComment }) {
 
         onAddComment({ name, text: commentText });
 
-        // Clear form fields
-        setName('');
+        // Clear only the comment text, keep the username
         setCommentText('');
     };
 
@@ -42,6 +41,7 @@ function CommentForm({ onAddComment }) {
                     onChange={(e) => setName(e.target.value)}
                     className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-500"
                     required
+                    //Delete the next two lines to allow editing of the name field
                     disabled={user && user.username ? true : false}
                     title={user && user.username ? "Your username is automatically filled in" : ""}
                 />
