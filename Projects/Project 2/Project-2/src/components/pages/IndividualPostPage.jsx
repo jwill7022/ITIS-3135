@@ -7,24 +7,24 @@ import { useAuth } from '../AuthContext';
 import axios from 'axios';
 import { InfinitySpin } from 'react-loader-spinner';
 
-// Sample static post content
+// Static fallback post content for demo purposes
 const staticPostContent = {
     1: { title: "My First Post", body: "This is the full, detailed content of my first post. It's a deep dive into the world of React and JavaScript!", author: "John Doe", date: "2026-01-01" },
     2: { title: "Learning React Router", body: "Mastering the <Routes>, <Route>, and <Link> components is key to building multi-page React applications.", author: "Jane Smith", date: "2026-01-05" },
     3: { title: "Tailwind CSS Mastery", body: "From utility classes to responsive design, Tailwind makes styling incredibly fast and maintainable.", author: "Alice Brown", date: "2026-01-10" },
 };
 
+// Individual blog post page with comments section
 function IndividualPostPage() {
+    // Get postId from URL parameters
     const { postId } = useParams();
     const postData = staticPostContent[postId] || staticPostContent[1]; // Fallback to post 1 if ID not found
     const [postAPIData, setPostAPIData] = useState();
     const [authorData, setAuthorData] = useState();
+    // Get authentication state for conditional comment form rendering
     const { isAuthenticated } = useAuth();
 
     const [loading, setLoading] = useState(true);
-    
-
-    // console.log(postAPIData, authorData);
 
     // State for managing comments for this post
     const [comments, setComments] = useState([]);

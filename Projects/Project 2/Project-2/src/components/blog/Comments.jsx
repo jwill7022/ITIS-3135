@@ -1,16 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router';
 
+// Displays all comments for a blog post
 function Comments({ comments }) {
-
-    
-    
+    // List of existing comments
     return (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors duration-500">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mt-4 mb-4">
                 Existing Comments:
             </h3>
             
+            {/* Show message if no comments exist */}
             {comments.length === 0 ? (
                 <p className="text-gray-600 dark:text-gray-400 italic">
                     No comments yet. Be the first to comment!

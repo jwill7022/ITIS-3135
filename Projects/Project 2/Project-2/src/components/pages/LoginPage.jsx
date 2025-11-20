@@ -2,27 +2,34 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../AuthContext";
 
+// Login page component with form validation
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    // Get login function from auth context
     const { login } = useAuth();
+    // useNavigate for programmatic navigation after successful login
     const navigate = useNavigate();
 
+    // Handle form submission with validation
     const handleSubmit = (e) => {
         e.preventDefault();
         setError('');
 
+        // Validate username is not empty
         if(!username.trim()) {
             setError('Username is required.');
             return;
         }
 
+        // Validate password is at least 6 characters
         if(password.length < 6) {
             setError('Password must be at least 6 characters');
             return;
         }
 
+        // Attempt login and redirect to homepage on success
         const success = login(username, password);
         if (success) {
             // Redirect to homepage after successful login

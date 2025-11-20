@@ -3,19 +3,21 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { InfinitySpin } from 'react-loader-spinner';
 
-// Static data for demonstration
+// Static fallback posts for demonstration
 const posts = [
     { id: 1, title: "My First Post", excerpt: "A short snippet of my first insightful blog post.", author: "John Doe", date: "2026-01-01" },
     { id: 2, title: "Learning React Router", excerpt: "An introduction to client-side navigation in modern React apps.", author: "Jane Smith", date: "2026-01-05" },
     { id: 3, title: "Tailwind CSS Mastery", excerpt: "Utility-first CSS for rapid and beautiful UI development.", author: "Alice Brown", date: "2026-01-10" },
 ];
 
+// Page displaying all blog posts fetched from API
 function BlogPostsPage() {
-
+    // State for storing API posts and user data
     const [apiPosts, setAPIposts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [usersData, setUsersData] = useState({});
 
+    // Fetch posts and user data from API on component mount
     useEffect(() => {
         const fetchData  = async () => {
         try {

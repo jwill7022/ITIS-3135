@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'; // for routing
 import { useTheme } from '../ThemeContext.jsx';
 import { useAuth } from '../AuthContext.jsx';
 
+// Header component with navigation and theme toggle
 function Header() {
     // Get theme state and toggler from context
     const { toggleTheme, theme } = useTheme();
+    // Get authentication state and logout function from context
     const { isAuthenticated, user, logout } = useAuth();
 
     return (

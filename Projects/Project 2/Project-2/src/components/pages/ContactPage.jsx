@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 
+// Contact form page for visitors to send messages
 function ContactPage() {
+    // State for form fields
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
+    // Update form data on input change
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
+    // Handle form submission (currently displays alert - integrate backend as needed)
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Form submitted (but not sent to backend):\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
-        // In a real app, you'd send this data to an API
+        // TODO: In a real app, you'd send this data to an API
         setFormData({ name: '', email: '', message: '' }); // Clear form
     };
 

@@ -4,9 +4,10 @@ import Content from "./Content";
 import { useTheme } from "../ThemeContext";
 import axios from 'axios';
 
-// Receive postContent as a prop instead of defining it internally
+// Wrapper component for blog post display
 function BlogPost({ postContent }) {
-    const { theme } = useTheme(); // Use theme for potential dynamic styling
+    // Get theme from context
+    const { theme } = useTheme();
 
 
     // Fallback content if postContent is not provided

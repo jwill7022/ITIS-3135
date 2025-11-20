@@ -1,7 +1,9 @@
 import { useAuth } from "../AuthContext";
 import { Link } from "react-router-dom";
 
+// Landing page that introduces the blog app
 function HomePage() {
+    // Get authentication state to conditionally render buttons
     const { isAuthenticated } = useAuth();
 
     return (

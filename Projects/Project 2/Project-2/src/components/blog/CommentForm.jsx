@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../AuthContext';
 
+// CommentForm component for logged-in users to submit comments
 function CommentForm({ onAddComment }) {
+    // Get logged-in user info from context
     const { user } = useAuth();
     const [name, setName] = useState('');
     const [commentText, setCommentText] = useState('');
 
-    // Set the name to the logged-in user's username on component mount
+    // Pre-fill name field with logged-in user's username
     useEffect(() => {
         if (user && user.username) {
             setName(user.username);
         }
     }, [user]);
 
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         if (name.trim() === '' || commentText.trim() === '') {
@@ -20,6 +23,7 @@ function CommentForm({ onAddComment }) {
             return;
         }
 
+        // Call parent component's callback with comment data
         onAddComment({ name, text: commentText });
 
         // Clear only the comment text, keep the username

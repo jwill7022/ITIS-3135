@@ -1,3 +1,4 @@
+// Footer component displayed at the bottom of all pages
 function Footer() {
     return (
         <footer className="bg-gray-800 dark:bg-gray-950 text-white py-6 mt-12 transition-colors duration-500">

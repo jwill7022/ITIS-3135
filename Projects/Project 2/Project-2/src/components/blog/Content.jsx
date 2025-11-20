@@ -1,8 +1,9 @@
 import { useTheme } from "../ThemeContext";
 
-
+// Displays the full content of a blog post
 function Content({title, body, author}) {
-    const { theme } = useTheme(); // Get the current theme
+    // Get current theme (for potential future use)
+    const { theme } = useTheme();
 
     return (
         <main className="container mx-auto px-4 py-8 min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
